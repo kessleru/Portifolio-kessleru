@@ -1,20 +1,27 @@
-import MetaBalls from '@/components/ReactBits/MetaBalls';
+import Card from '@/components/ui/Card';
 
 function Home() {
   return (
-    <section className="content-container grid grid-cols-2">
+    <section className="content-container grid grid-cols-2 gap-6">
       <div>
-        <div className="flex gap-4 mb-6 text-3xl font-bold">
+        <div className="mb-4 flex flex-wrap items-center gap-2 text-2xl font-bold">
           <span className="text-ctp-green">&gt;</span>
           <h1>
             Olá! Sou o <span className="text-ctp-green">Kessleru</span>
           </h1>
         </div>
-        <div className="text-ctp-subtext-0 text-balance text-xl">
+        <div className="w-full max-w-[60ch] text-balance text-base text-ctp-subtext-0">
           <p className="mb-4">
             Sou estudante de Ciência da Computação com foco em desenvolvimento
-            web <span className="text-ctp-green/80">full stack</span> utilizando
-            o ecossistema <span className="text-ctp-green/80">JavaScript.</span>
+            web{' '}
+            <span className="border-b-2 border-ctp-green/80 border-dashed text-ctp-green/80">
+              Full Stack
+            </span>{' '}
+            utilizando o ecossistema{' '}
+            <span className="border-b-2 border-ctp-green/80 border-dashed text-ctp-green/80">
+              JavaScript
+            </span>
+            .
           </p>
           <p>
             Meu aprendizado é orientado a projetos práticos e cursos
@@ -23,20 +30,63 @@ function Home() {
           </p>
         </div>
       </div>
-      <div className="cursor-none bg-ctp-mantle/40 p-1 rounded-md border-2 border-ctp-crust/20 aspect-square w-full max-w-sm justify-self-end">
-        <MetaBalls
-          color="var(--ctp-green)"
-          cursorBallColor="var(--ctp-green)"
-          cursorBallSize={1.5}
-          ballCount={20}
-          animationSize={25}
-          enableMouseInteraction
-          enableTransparency={true}
-          hoverSmoothness={0.15}
-          clumpFactor={1.1}
-          speed={0.2}
-        />
-      </div>
+      <Card
+        fileName="Perfil.tsx"
+        className="w-full max-w-full justify-self-start"
+      >
+        <pre className="overflow-x-auto text-xs leading-relaxed text-ctp-code">
+          <code>
+            <span>
+              <span className="text-ctp-mauve">const</span> pessoa ={' '}
+              <span className="text-ctp-maroon">{'{'}</span>
+            </span>
+            <br />
+            <span>
+              {'  '}nome<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-green">'Otávio Kessler Ustra'</span>,
+            </span>
+            <br />
+            <span>
+              {'  '}idade<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-yellow">20</span>,
+            </span>
+            <br />
+            <span>
+              {'  '}localizacao<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-green">'Ituiutaba, MG - Brasil'</span>,
+            </span>
+            <br />
+            <span>
+              {'  '}formacao<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-maroon">{'{'}</span>
+            </span>
+            <br />
+            <span>
+              {'    '}curso<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-green">'Ciência da Computação'</span>,
+            </span>
+            <br />
+            <span>
+              {'    '}instituicao<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-green">'IFTM Ituiutaba'</span>,
+            </span>
+            <br />
+            <span>
+              {'    '}status<span className="text-ctp-green">{':'}</span>{' '}
+              <span className="text-ctp-green">'Em andamento'</span>
+            </span>
+            <br />
+            <span>
+              {'  '}
+              <span className="text-ctp-maroon">{'}'}</span>,
+            </span>
+            <br />
+            <span>
+              <span className="text-ctp-maroon">{'}'}</span>;
+            </span>
+          </code>
+        </pre>
+      </Card>
     </section>
   );
 }
