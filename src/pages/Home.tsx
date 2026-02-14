@@ -42,7 +42,7 @@ function highlightCode(text: string): ReactNode {
       </span>
     ) : (
       token.text
-    ),
+    )
   );
 }
 
@@ -50,13 +50,13 @@ function Home() {
   return (
     <section className="content-container grid grid-cols-2 max-lg:grid-cols-1 gap-6 max-lg:gap-12">
       <div>
-        <div className="mb-4 flex flex-wrap items-center gap-2 text-2xl font-bold">
-          <span className="text-ctp-green">&gt;</span>
+        <div className="mb-4 flex flex-wrap items-center gap-2 text-xl sm:text-2xl font-bold">
+          <span className="text-ctp-green max-sm:hidden">&gt;</span>
           <h1>
             Olá! Sou o <span className="text-ctp-green">Kessleru</span>
           </h1>
         </div>
-        <div className="w-full text-balance max-w-[60ch] text-base text-ctp-subtext-0">
+        <div className="w-full text-balance max-w-[60ch] text-sm sm:text-base text-ctp-subtext-0">
           <p className="mb-2">
             Sou estudante de Ciência da Computação com foco em desenvolvimento
             web{' '}
@@ -79,7 +79,7 @@ function Home() {
       <Card fileName="Perfil.tsx" className="w-full justify-self-start">
         <TextType
           as="pre"
-          className="overflow-x-auto text-xs leading-relaxed text-ctp-code"
+          className="overflow-x-auto text-xs sm:text-[14px] leading-relaxed text-ctp-code"
           text={`const pessoa = {\n  nome: 'Otávio Kessler Ustra',\n  idade: 20,\n  localizacao: 'Ituiutaba, MG - Brasil',\n  formacao: {\n    curso: 'Ciência da Computação',\n    instituicao: 'IFTM Ituiutaba',\n    status: 'Em andamento'\n  },\n};`}
           typingSpeed={20}
           showCursor={false}
