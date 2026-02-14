@@ -9,7 +9,7 @@ const Modal: React.FC<{
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed right-17 top-18 z-50">
+    <div className="absolute right-17 top-18 z-50">
       <Card fileName="Modal.tsx">{children}</Card>
     </div>,
     document.body
