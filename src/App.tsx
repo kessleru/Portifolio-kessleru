@@ -1,5 +1,4 @@
 import Header from '@/components/layout/Header';
-import TechLogoLoop from '@/components/ui/TechLogoLoop';
 import Home from '@/pages/Home';
 import ClickSpark from './components/react-bits/click-spark/ClickSpark';
 
@@ -17,7 +16,6 @@ export default function App() {
           <Header />
           <Home />
         </div>
-        <TechLogoLoop />
       </ClickSpark>
     </>
   );

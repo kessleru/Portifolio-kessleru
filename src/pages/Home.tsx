@@ -1,4 +1,5 @@
 import ProfileCard from '@/components/ui/ProfileCard';
+import SkillsLoop from '@/components/ui/SkillsLoop';
 
 function Home() {
   return (
@@ -31,6 +32,9 @@ function Home() {
         </div>
       </div>
       <ProfileCard />
+      <div className="col-span-2 mt-12 max-lg:hidden">
+        <SkillsLoop />
+      </div>
     </section>
   );
 }

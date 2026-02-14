@@ -14,13 +14,15 @@ import {
   SiTypescript,
   SiTailwindcss,
 } from 'react-icons/si';
+import Card from './Card';
 
 type TechLogoItem = { node: ReactNode; title: string; href: string };
 
-type TechLogoLoopProps = {
+type SkillsLoopProps = {
   logos: TechLogoItem[];
   speed?: number;
   direction?: 'left' | 'right' | 'up' | 'down';
+  className?: string;
   logoHeight?: number;
   gap?: number;
   hoverSpeed?: number;
@@ -28,7 +30,7 @@ type TechLogoLoopProps = {
   ariaLabel?: string;
 };
 
-const TypedLogoLoop = LogoLoop as unknown as ComponentType<TechLogoLoopProps>;
+const TypedLogoLoop = LogoLoop as unknown as ComponentType<SkillsLoopProps>;
 
 const techLogos = [
   {
@@ -65,9 +67,12 @@ const techLogos = [
   { node: <SiFigma />, title: 'Figma', href: 'https://www.figma.com' },
 ];
 
-function TechLogoLoop() {
+function SkillsLoop() {
   return (
-    <div className="h-52 mt-36 relative overflow-hidden text-ctp-subtext-0">
+    <Card
+      className="text-ctp-subtext-0 max-w-fit"
+      fileName="SkillsLoop.tsx"
+    >
       <TypedLogoLoop
         logos={techLogos}
         speed={50}
@@ -78,8 +83,8 @@ function TechLogoLoop() {
         scaleOnHover
         ariaLabel="Technology partners"
       />
-    </div>
+    </Card>
   );
 }
 
-export default TechLogoLoop;
+export default SkillsLoop;

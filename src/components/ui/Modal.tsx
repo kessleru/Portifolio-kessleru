@@ -10,7 +10,7 @@ const Modal: React.FC<{
 
   return createPortal(
     <div className="absolute right-17 top-18 z-50">
-      <Card fileName="Modal.tsx">{children}</Card>
+      <Card fileName="Modal.tsx" className='min-w-40'>{children}</Card>
     </div>,
     document.body
   );
