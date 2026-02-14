@@ -18,7 +18,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="flex justify-between shadow-md bg-ctp-mantle/40 p-1 rounded-full border-2 border-ctp-crust/20 mb-36">
+    <header className="flex justify-between shadow-md border-ctp-crust/20 bg-ctp-mantle rounded-full border-2 mb-36">
       <div className='ml-4 text-sm sm:text-base tracking-widest relative after:content-[""] after:ml-0.5 after:inline-block after:w-2 after:h-4 after:bg-ctp-green after:top-1 after:absolute after:cursor-blink *:mr-px'>
         <span className="text-ctp-green font-medium">~</span>
         <span>/</span>
